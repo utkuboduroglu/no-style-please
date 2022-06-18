@@ -21,9 +21,9 @@ Now, we can consider $x - v_0$ an element of $P$. Notice that the check for whet
 v_0 & v_1 & \dots & v_n
 \end{bmatrix}$.
 
-We specialize the method highlighted to 3-space. Given any ray $r: ?bbR \to ?bbR ^3$ of the form $r(t) \coloneqq r_0 + ut$ intersects the plane the simplex $ \begin{bmatrix}
+We specialize the method highlighted to 3-space. Given any ray $r: \mathbb{R} \to \mathbb{R} ^3$ of the form $r(t) := r_0 + ut$ intersects the plane the simplex $ \begin{bmatrix}
 v_0 & v_1 & v_2
-\end{bmatrix}$ lives in if and only if there is a $t' \in ?bbR$ such that $\langle r(t'), N \rangle - \langle v_0, N\rangle = 0$, where $N$ can be obtained by $N \coloneqq (v_1 - v_0)\times (v_2, v_0)$. Then, we can check whether the ray intersects the triangle itself by checking whether ALL the following conditions hold:
+\end{bmatrix}$ lives in if and only if there is a $t' \in \mathbb{R}$ such that $\langle r(t'), N \rangle - \langle v_0, N\rangle = 0$, where $N$ can be obtained by $N := (v_1 - v_0)\times (v_2, v_0)$. Then, we can check whether the ray intersects the triangle itself by checking whether ALL the following conditions hold:
 
 $$
 \begin{align*}
