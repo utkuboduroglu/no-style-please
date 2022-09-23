@@ -15,14 +15,14 @@ Since colimits are just representations of such functors of appropriate variance
 \\]
 
 Now, as a corollary of this, we can show that left adjoints preserve said colimits (and right adjoints preserve limits). The following argument will be sufficient: Let $$F: C \dashv D: G$$ be an adjunction, and let $$K: J\to C$$ be a diagram.
-\\[
-\begin{align*}
+
+$$ \begin{align*}
     D(F(\text{colim} _J K), d) &\cong C(\text{colim} _J K, Gd)\\
     &\cong \lim_{J^\mathsf{op}} C(K, Gd)\\ &\cong \lim_{J?^Sop} D(FK, d)\\
     &\cong D(\text{colim} _J FK, d)
-\end{align*}
-\\]
-Now, by the fact that the Yoneda embedding $$y: D^\mathsf{op} \to \mathsf{Set}$$ is a fully-faithful embedding, we get that $$F(?colim K) \cong ?colim FK$$.
+\end{align*} $$
+
+Now, by the fact that the Yoneda embedding $$y: D^\mathsf{op} \to \mathsf{Set}$$ is a fully-faithful embedding, we get that $$F(\text{colim} K) \cong \text{colim} FK$$.
 
 Finally, before we can start the main point of the post, we note the following fact, and make another note on the notation to clarify some things:
 
