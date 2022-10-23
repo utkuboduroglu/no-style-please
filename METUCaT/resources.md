@@ -14,7 +14,7 @@ To get you started on researching category theory-related subjects, here are som
 * [Applied Category Theory conference](https://msp.cis.strath.ac.uk/act2022/) is a yearly conference focusing on the applications and applied aspects of category theory.
 
 ## Books and resources on category theory
-* Awodey, [Category Theory](https://www.amazon.com/Category-Theory-Oxford-Logic-Guides/dp/0199237182)
+* Awodey, [Category Theory](https://www.amazon.com/Category-Theory-Oxford-Logic-Guides/dp/0199237182) (**our primary textbook**)
 * Riehl, [Category Theory in Context](https://emilyriehl.github.io/files/context.pdf)
 * Mac Lane, [Categories for the Working Mathematician](https://link.springer.com/book/10.1007/978-1-4757-4721-8)
 * Borceux, [Handbook of Categorical Algebra](https://www.cambridge.org/core/books/handbook-of-categorical-algebra/A0B8285BBA900AFE85EED8C971E0DE14)
