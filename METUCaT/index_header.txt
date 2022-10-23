@@ -7,6 +7,7 @@ title: METU Category Theory (METUCaT) content page
 
 You can contact me at [utkubod@gmail.com](mailto:utkubod@gmail.com) for help accessing the resources or for any questions/feedback.
 
-For a collection of references and sources, please [visit this page](./resources.html) for more information.
+For a collection of references and sources, please visit:
 
+* [some references for category theory](./resources.html)
 
