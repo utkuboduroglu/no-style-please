@@ -41,7 +41,7 @@ In any given document, you'll probably encounter the following:
 
 Here is an example for an "aligned" math environment:
 \\[
-	\text{\normalfont Hom} (A\otimes B, C) \cong \text{\normalfont Hom}(A, [B, C])
+	\text{Hom} (A\otimes B, C) \cong \text{Hom}(A, [B, C])
 \\]
 
 Using word processors like $$\LaTeX$$ or standards like Markdown will ensure standards for everything described above. What remains is to emulate those standards on paper in a way that oneself will be able to parse easily. In such a case, one will be able to achieve an almost uniform representation in each of the following:
