@@ -33,7 +33,9 @@ Finally, we are ready to show the following proposition:
 **Proposition**: Let $$i: A\to X$$ be a cofibration, and $$g: A\to B$$ any map. Then the induced inclusion $$j: B\to B\cup_g X$$ is a cofibration. (Some notes on notation: the maps $$i_0$$ indicate $$1_Z \times \{0\}$$, and $$\text{id}$$ is a special notation for the specific identity $$1_I$$.)
 
 The following is a test diagram of $$i$$ with the pushout diagram for $$B\cup_g X$$:
-\\[\begin{tikzcd}
+
+<script type="text/tikz">
+\begin{tikzcd}
 	&& {A\times I} \\
 	A &&&& B \\
 	&& {X\times I} \\
@@ -45,10 +47,13 @@ The following is a test diagram of $$i$$ with the pushout diagram for $$B\cup_g 
 	\arrow["j", from=2-5, to=4-5]
 	\arrow["g"'{pos=0.7}, from=2-1, to=2-5]
 	\arrow["h", from=4-1, to=4-5]
-\end{tikzcd}\\]
+\end{tikzcd}
+</script>
 
 Now, we can carry the pushout diagram along the functor $$-\times I$$ to obtain a new pushout:
-\\[\begin{tikzcd}
+
+<script type="text/tikz">
+\begin{tikzcd}
 	&& {A\times I} &&&& {B\times I} \\
 	A &&&& B \\
 	&& {X\times I} &&&& {(B\cup_g X)\times I} \\
@@ -63,10 +68,13 @@ Now, we can carry the pushout diagram along the functor $$-\times I$$ to obtain 
 	\arrow["{i_0}", from=4-5, to=3-7]
 	\arrow["{i_0}", from=2-5, to=1-7]
 	\arrow["{j\times \text{id}}"', from=1-7, to=3-7]
-\end{tikzcd}\\]
+\end{tikzcd}
+</script>
 
 Let's complete our test diagram by some new morphisms through $$I$$ and a test object $$Z$$:
-\\[\begin{tikzcd}
+
+<script type="text/tikz">
+\begin{tikzcd}
 	&& {A\times I} &&&& {B\times I} \\
 	A &&&& B \\
 	&& {X\times I} &&&& {(B\cup_g X)\times I} & Z \\
@@ -85,10 +93,13 @@ Let's complete our test diagram by some new morphisms through $$I$$ and a test o
 	\arrow["{g\times \text{id}}"', from=1-3, to=1-7]
 	\arrow["{\varepsilon_1}"', from=1-7, to=3-8]
 	\arrow["{\varepsilon_0}"', from=4-5, to=3-8]
-\end{tikzcd}\\]
+\end{tikzcd}
+</script>
 
 Notice the maps $$\varepsilon_0 h = \varepsilon_1 \circ g\times \text{id} $$. Since $$i: A\to X$$ is a cofibration, we have a map $$\tilde h : X\times I \to Z$$ commuting with both these maps. But then, as $$(B\cup_g X)\times I$$ is also the pushout $$(B\times I) \cup_{g\times \text{id}} (X\times I)$$, there is a unique map $$k: (B\cup_g X)\times I \to Z$$ commuting the following diagram:
-\\[\begin{tikzcd}
+
+<script type="text/tikz">
+\begin{tikzcd}
 	{A\times I} && {B\times I} \\
 	& {(B\cup_g X)\times I} \\
 	{X\times I} && Z
@@ -98,7 +109,8 @@ Notice the maps $$\varepsilon_0 h = \varepsilon_1 \circ g\times \text{id} $$. Si
 	\arrow["{\tilde h}", from=3-1, to=3-3]
 	\arrow["{h\times \text{id}}"{description}, from=3-1, to=2-2]
 	\arrow["{j\times \text{id}}", from=1-3, to=2-2]
-\end{tikzcd}\\]
+\end{tikzcd}
+</script>
 
 which is exactly what we needed for $$j$$ to be a cofibration.
 
