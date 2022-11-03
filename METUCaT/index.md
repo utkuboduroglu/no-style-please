@@ -11,7 +11,8 @@ For a collection of references and sources, please visit:
 
 * [some references for category theory](./resources.html)
 
-**content updated**: 28-10-2022 17:11:01
+**content updated**: 03-11-2022 12:55:03
 
+* [03-11-2022](./content/03-11-2022/index.md)
 * [28-10-2022](./content/28-10-2022/index.md)
 * [handouts](./content/handouts/index.md)

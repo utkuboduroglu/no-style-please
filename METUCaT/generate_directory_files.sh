@@ -33,8 +33,9 @@ do
 	echo -ne "\t[$0 : insert_file] "
 
     _file_modification_time=$(date -d @`stat -c %Y index.md` +%x\ %T)
+    _base_filename=${_file##*/}
 	echo -ne \
-        "* [$_file](./${_file##*/})\n\t* **modified**: $_file_modification_time\n" \
+        "* [$_base_filename](./$_base_filename)\n\t* **modified**: $_file_modification_time\n" \
         | tee -a $WORKING_FILE
 
 done < <( \
