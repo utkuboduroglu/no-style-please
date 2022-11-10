@@ -17,5 +17,5 @@ do
     echo -ne "\t[$0 : insert] "
     echo -ne "* [${file_path##*/}]($file_path/index.md)\n" | tee -a index.md
     ./generate_directory_files.sh "$file_path"
-done < <(find ./content -type d -not -path "./content")
-
+done < <(find ./content -type d -not -path "./content" -printf '%p %C@\n' \
+    | sort -k2,2 -r | awk '{ print $1 }')
