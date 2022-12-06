@@ -12,5 +12,7 @@ We will discuss the following chapters from Awodey:
 * 1.7 Free categories
 
 Please check out the following files for additional examples and exercises on the topic.
+* [10-11-2022_free_constructions.pdf](./10-11-2022_free_constructions.pdf)
+	* **modified**: 06-12-2022 23:50:39
 * [examples_10-11-2022.pdf](./examples_10-11-2022.pdf)
-	* **modified**: 10-11-2022 14:12:10
+	* **modified**: 06-12-2022 23:50:39
