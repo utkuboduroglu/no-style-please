@@ -7,8 +7,6 @@
 WORKING_DIRECTORY=$1
 WORKING_FILE=$WORKING_DIRECTORY/index.md
 
-touch $WORKING_FILE
-
 # insert header
 ## instead of subfile_header.txt, use << EOF
 if [ -f $WORKING_DIRECTORY/header.txt ]; then
