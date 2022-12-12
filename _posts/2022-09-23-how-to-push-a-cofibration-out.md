@@ -26,7 +26,7 @@ Now, by the fact that the Yoneda embedding $$y: D^\mathsf{op} \to \mathsf{Set}$$
 
 Finally, before we can start the main point of the post, we note the following fact, and make another note on the notation to clarify some things:
 
-* Fixing the space $$I \coloneqq [0, 1] \in \mathsf{cgHaus}$$ in the category of compactly-generated Hausdorff spaces, by the fact that this category is Cartesian Closed, we have an adjunction $$-\times I : \mathsf{cgHaus} \dashv \mathsf{cgHaus} : -^I$$. Thus, for any diagram $$K: J\to \mathsf{cgHaus}$$, it is the case that $$(\text{colim} K)\times I \cong \text{colim} (K\times I)$$.
+* Fixing the space $$I := [0, 1] \in \mathsf{cgHaus}$$ in the category of compactly-generated Hausdorff spaces, by the fact that this category is Cartesian Closed, we have an adjunction $$-\times I : \mathsf{cgHaus} \dashv \mathsf{cgHaus} : -^I$$. Thus, for any diagram $$K: J\to \mathsf{cgHaus}$$, it is the case that $$(\text{colim} K)\times I \cong \text{colim} (K\times I)$$.
 * A note for pushouts: Following standard notation, note that for any pushout $$B \cup_g X$$, the above fact takes the following form in notation: $$(B \cup_g X)\times I \cong (B\times I)\cup_{g\times \text{id}} (X\times I)$$.
 
 Finally, we are ready to show the following proposition:
@@ -34,83 +34,25 @@ Finally, we are ready to show the following proposition:
 
 The following is a test diagram of $$i$$ with the pushout diagram for $$B\cup_g X$$:
 
-<script type="text/tikz">
-\begin{tikzcd}
-	&& {A\times I} \\
-	A &&&& B \\
-	&& {X\times I} \\
-	X &&&& {B\cup_g X}
-	\arrow["{i_0}", from=2-1, to=1-3]
-	\arrow["{i_0}", from=4-1, to=3-3]
-	\arrow["i"', from=2-1, to=4-1]
-	\arrow[from=1-3, to=3-3]
-	\arrow["j", from=2-5, to=4-5]
-	\arrow["g"'{pos=0.7}, from=2-1, to=2-5]
-	\arrow["h", from=4-1, to=4-5]
-\end{tikzcd}
-</script>
+<!-- https://q.uiver.app/?q=WzAsNixbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbMiw0LCJpIl0sWzIsMCwiaV8wIiwyXSxbMCwxLCJpXFx0aW1lcyBcXG1hdGhzZntpZH0iLDIseyJsYWJlbF9wb3NpdGlvbiI6MzB9XSxbNCwxLCJpXzAiXSxbMiwzLCJnIiwwLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzMsNSwiaiJdLFs0LDUsImgiXSxbNSwyLCIiLDAseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyLWludmVyc2UifX1dXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNixbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbMiw0LCJpIl0sWzIsMCwiaV8wIiwyXSxbMCwxLCJpXFx0aW1lcyBcXG1hdGhzZntpZH0iLDIseyJsYWJlbF9wb3NpdGlvbiI6MzB9XSxbNCwxLCJpXzAiXSxbMiwzLCJnIiwwLHsibGFiZWxfcG9zaXRpb24iOjcwfV0sWzMsNSwiaiJdLFs0LDUsImgiXSxbNSwyLCIiLDAseyJzdHlsZSI6eyJuYW1lIjoiY29ybmVyLWludmVyc2UifX1dXQ==&embed" width="745" height="560" style="border-radius: 8px; border: none;"></iframe>
+
+![](./example.svg)
 
 Now, we can carry the pushout diagram along the functor $$-\times I$$ to obtain a new pushout:
 
-<script type="text/tikz">
-\begin{tikzcd}
-	&& {A\times I} &&&& {B\times I} \\
-	A &&&& B \\
-	&& {X\times I} &&&& {(B\cup_g X)\times I} \\
-	X &&&& {B\cup_g X}
-	\arrow["{i_0}", from=2-1, to=1-3]
-	\arrow["{i_0}", from=4-1, to=3-3]
-	\arrow["i"', from=2-1, to=4-1]
-	\arrow[from=1-3, to=3-3]
-	\arrow["j", from=2-5, to=4-5]
-	\arrow["g"'{pos=0.7}, from=2-1, to=2-5]
-	\arrow["h", from=4-1, to=4-5]
-	\arrow["{i_0}", from=4-5, to=3-7]
-	\arrow["{i_0}", from=2-5, to=1-7]
-	\arrow["{j\times \text{id}}"', from=1-7, to=3-7]
-\end{tikzcd}
-</script>
+<!-- https://q.uiver.app/?q=WzAsOCxbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbNiwwLCJCXFx0aW1lcyBJIl0sWzYsMiwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzIsNCwiaSJdLFsyLDAsImlfMCIsMl0sWzAsMSwiaVxcdGltZXMgXFxtYXRoc2Z7aWR9IiwyLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsMSwiaV8wIl0sWzIsMywiZyIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFszLDUsImoiXSxbNCw1LCJoIl0sWzUsMiwiIiwwLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lci1pbnZlcnNlIn19XSxbMyw2LCJpXzAiXSxbNiw3LCJqXFx0aW1lcyBcXG1hdGhzZntpZH0iXSxbNSw3LCJpXzAiXV0= -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsOCxbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbNiwwLCJCXFx0aW1lcyBJIl0sWzYsMiwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzIsNCwiaSJdLFsyLDAsImlfMCIsMl0sWzAsMSwiaVxcdGltZXMgXFxtYXRoc2Z7aWR9IiwyLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsMSwiaV8wIl0sWzIsMywiZyIsMCx7ImxhYmVsX3Bvc2l0aW9uIjo3MH1dLFszLDUsImoiXSxbNCw1LCJoIl0sWzUsMiwiIiwwLHsic3R5bGUiOnsibmFtZSI6ImNvcm5lci1pbnZlcnNlIn19XSxbMyw2LCJpXzAiXSxbNiw3LCJqXFx0aW1lcyBcXG1hdGhzZntpZH0iXSxbNSw3LCJpXzAiXV0=&embed" width="1118" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 Let's complete our test diagram by some new morphisms through $$I$$ and a test object $$Z$$:
 
-<script type="text/tikz">
-\begin{tikzcd}
-	&& {A\times I} &&&& {B\times I} \\
-	A &&&& B \\
-	&& {X\times I} &&&& {(B\cup_g X)\times I} & Z \\
-	X &&&& {B\cup_g X}
-	\arrow["{i_0}", from=2-1, to=1-3]
-	\arrow["{i_0}", from=4-1, to=3-3]
-	\arrow["i"', from=2-1, to=4-1]
-	\arrow[from=1-3, to=3-3]
-	\arrow["j"{pos=0.3}, from=2-5, to=4-5]
-	\arrow["g"'{pos=0.7}, from=2-1, to=2-5]
-	\arrow["h", from=4-1, to=4-5]
-	\arrow["{i_0}", from=4-5, to=3-7]
-	\arrow["{i_0}", from=2-5, to=1-7]
-	\arrow["{j\times \text{id}}"', from=1-7, to=3-7]
-	\arrow["{h\times \text{id}}"'{pos=0.3}, from=3-3, to=3-7]
-	\arrow["{g\times \text{id}}"', from=1-3, to=1-7]
-	\arrow["{\varepsilon_1}"', from=1-7, to=3-8]
-	\arrow["{\varepsilon_0}"', from=4-5, to=3-8]
-\end{tikzcd}
-</script>
+<!-- https://q.uiver.app/?q=WzAsOSxbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbNiwwLCJCXFx0aW1lcyBJIl0sWzYsMiwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzcsMywiWiJdLFsyLDQsImkiXSxbMiwwLCJpXzAiLDJdLFswLDEsImlcXHRpbWVzIFxcbWF0aHNme2lkfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFs0LDEsImlfMCJdLFsyLDMsImciLDAseyJsYWJlbF9wb3NpdGlvbiI6NzB9XSxbMyw1LCJqIiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsNSwiaCJdLFs1LDIsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXItaW52ZXJzZSJ9fV0sWzMsNiwiaV8wIl0sWzYsNywialxcdGltZXMgXFxtYXRoc2Z7aWR9Il0sWzUsNywiaV8wIl0sWzUsOCwiXFx2YXJlcHNpbG9uXzAiXSxbNiw4LCJcXHZhcmVwc2lsb25fMSIsMCx7ImN1cnZlIjotM31dLFsxLDcsImhcXHRpbWVzIFxcbWF0aHNme2lkfSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFswLDYsImdcXHRpbWVzIFxcbWF0aHNme2lkfSJdXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsOSxbMiwwLCJBXFx0aW1lcyBJIl0sWzIsMiwiWFxcdGltZXMgSSJdLFswLDEsIkEiXSxbNCwxLCJCIl0sWzAsMywiWCJdLFs0LDMsIkJcXGN1cF9nIFgiXSxbNiwwLCJCXFx0aW1lcyBJIl0sWzYsMiwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzcsMywiWiJdLFsyLDQsImkiXSxbMiwwLCJpXzAiLDJdLFswLDEsImlcXHRpbWVzIFxcbWF0aHNme2lkfSIsMix7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFs0LDEsImlfMCJdLFsyLDMsImciLDAseyJsYWJlbF9wb3NpdGlvbiI6NzB9XSxbMyw1LCJqIiwwLHsibGFiZWxfcG9zaXRpb24iOjMwfV0sWzQsNSwiaCJdLFs1LDIsIiIsMCx7InN0eWxlIjp7Im5hbWUiOiJjb3JuZXItaW52ZXJzZSJ9fV0sWzMsNiwiaV8wIl0sWzYsNywialxcdGltZXMgXFxtYXRoc2Z7aWR9Il0sWzUsNywiaV8wIl0sWzUsOCwiXFx2YXJlcHNpbG9uXzAiXSxbNiw4LCJcXHZhcmVwc2lsb25fMSIsMCx7ImN1cnZlIjotM31dLFsxLDcsImhcXHRpbWVzIFxcbWF0aHNme2lkfSIsMCx7ImxhYmVsX3Bvc2l0aW9uIjozMH1dLFswLDYsImdcXHRpbWVzIFxcbWF0aHNme2lkfSJdXQ==&embed" width="1246" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 Notice the maps $$\varepsilon_0 h = \varepsilon_1 \circ g\times \text{id} $$. Since $$i: A\to X$$ is a cofibration, we have a map $$\tilde h : X\times I \to Z$$ commuting with both these maps. But then, as $$(B\cup_g X)\times I$$ is also the pushout $$(B\times I) \cup_{g\times \text{id}} (X\times I)$$, there is a unique map $$k: (B\cup_g X)\times I \to Z$$ commuting the following diagram:
 
-<script type="text/tikz">
-\begin{tikzcd}
-	{A\times I} && {B\times I} \\
-	& {(B\cup_g X)\times I} \\
-	{X\times I} && Z
-	\arrow["{i\times \text{id}}", from=1-1, to=3-1]
-	\arrow["{g\times \text{id}}"', from=1-1, to=1-3]
-	\arrow["{\varepsilon_1}"', from=1-3, to=3-3]
-	\arrow["{\tilde h}", from=3-1, to=3-3]
-	\arrow["{h\times \text{id}}"{description}, from=3-1, to=2-2]
-	\arrow["{j\times \text{id}}", from=1-3, to=2-2]
-\end{tikzcd}
-</script>
+<!-- https://q.uiver.app/?q=WzAsNSxbMCwwLCJBXFx0aW1lcyBJIl0sWzIsMCwiQlxcdGltZXMgSSJdLFswLDIsIlhcXHRpbWVzIEkiXSxbMiwyLCJaIl0sWzEsMSwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzIsMywiXFx0aWxkZSBoIl0sWzEsMywiXFx2YXJlcHNpbG9uXzEiXSxbMCwxLCJnXFx0aW1lcyBcXG1hdGhzZntpZH0iXSxbMiw0LCJoXFx0aW1lcyBcXG1hdGhzZntpZH0iLDFdLFsxLDQsImpcXHRpbWVzIFxcbWF0aHNme2lkfSIsMV0sWzAsMiwiaVxcdGltZXMgXFxtYXRoc2Z7aWR9IiwyXSxbNCwzLCJcXGV4aXN0cyFrIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNSxbMCwwLCJBXFx0aW1lcyBJIl0sWzIsMCwiQlxcdGltZXMgSSJdLFswLDIsIlhcXHRpbWVzIEkiXSxbMiwyLCJaIl0sWzEsMSwiKEJcXGN1cF9nIFgpXFx0aW1lcyBJIl0sWzIsMywiXFx0aWxkZSBoIl0sWzEsMywiXFx2YXJlcHNpbG9uXzEiXSxbMCwxLCJnXFx0aW1lcyBcXG1hdGhzZntpZH0iXSxbMiw0LCJoXFx0aW1lcyBcXG1hdGhzZntpZH0iLDFdLFsxLDQsImpcXHRpbWVzIFxcbWF0aHNme2lkfSIsMV0sWzAsMiwiaVxcdGltZXMgXFxtYXRoc2Z7aWR9IiwyXSxbNCwzLCJcXGV4aXN0cyFrIiwwLHsic3R5bGUiOnsiYm9keSI6eyJuYW1lIjoiZGFzaGVkIn19fV1d&embed" width="584" height="432" style="border-radius: 8px; border: none;"></iframe>
 
 which is exactly what we needed for $$j$$ to be a cofibration.
 
