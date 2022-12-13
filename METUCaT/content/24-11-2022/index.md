@@ -14,4 +14,4 @@ The relevant chapters in Awodey are:
 
 Please check the following file(s) for notes on the exact subjects.
 * [24-11-2022_internal_data.pdf](./24-11-2022_internal_data.pdf)
-	* **modified**: 04-12-2022 18:32:07
+	* **modified**: 13-12-2022 19:37:17

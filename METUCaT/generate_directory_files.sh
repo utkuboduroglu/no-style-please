@@ -30,7 +30,8 @@ while IFS= read -r _file
 do
 	echo -ne "\t[$0 : insert_file] "
 
-    _file_modification_time=$(date -d @`stat -c %Y index.md` +%x\ %T)
+    _raw_datestring=$(stat -c %Y $_file)
+    _file_modification_time=$(date -d @$_raw_datestring +%x\ %T)
     _base_filename=${_file##*/}
 	echo -ne \
         "* [$_base_filename](./$_base_filename)\n\t* **modified**: $_file_modification_time\n" \
